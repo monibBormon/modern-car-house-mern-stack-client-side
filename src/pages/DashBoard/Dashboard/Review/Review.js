@@ -4,6 +4,10 @@ import { FaStar } from 'react-icons/fa'
 const Review = () => {
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
+
+    const handleRating = () => {
+        alert('Rating Added Succsfully.')
+    }
     return (
         <div>
             <h2 className='text-4xl mb-5'>Review Our Service</h2>
@@ -17,7 +21,7 @@ const Review = () => {
                 })}
             </div>
             <textarea className='border-2 w-1/2 h-16 border-red-400 pl-2 pt-2 mt-3 rounded-lg' name="rating" cols="30" rows="5" placeholder='Give your feedback'></textarea><br />
-            <button className='border-2 border-red-400 rounded-full px-5 py-1 font-semibold'>Submit Rating</button>
+            <button onClick={handleRating} className='border-2 border-red-400 rounded-full px-5 py-1 font-semibold'>Submit Rating</button>
         </div>
     );
 };
