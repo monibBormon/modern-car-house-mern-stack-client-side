@@ -26,9 +26,9 @@ const Register = () => {
                         <h2 className='text-center text-4xl mb-5 font-semibold'>Register Now</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("name", { required: true })} placeholder='Your Name' /> <br />
-                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("email", { required: true })} placeholder='Email' /> <br />
-                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("password", { required: true })} placeholder='Password' /> <br />
-                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("password2", { required: true })} placeholder='Re-enter Password' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("email", { required: true })} type='email' placeholder='Email' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("password", { required: true })} type='password' placeholder='Password' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("password2", { required: true })} type='password' placeholder='Re-enter Password' /> <br />
                             {/* errors will return when field validation fails  */}
                             {errors.exampleRequired && <span>This field is required</span>}
 
