@@ -5,7 +5,7 @@ import useFirebase from '../../../hooks/useFirebase';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { registerUser } = useFirebase()
+    const { registerUser, error } = useFirebase()
 
     // 
     const history = useHistory()
@@ -30,7 +30,7 @@ const Register = () => {
                             <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("password", { required: true })} type='password' placeholder='Password' /> <br />
                             <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("password2", { required: true })} type='password' placeholder='Re-enter Password' /> <br />
                             {/* errors will return when field validation fails  */}
-                            {errors.exampleRequired && <span>This field is required</span>}
+                            <p className='text-red-500 mb-2 font-semibold'>{error}</p>
 
                             <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2' type="submit" value='Register' />
                         </form>
