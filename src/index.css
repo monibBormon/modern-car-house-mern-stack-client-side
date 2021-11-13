@@ -14,3 +14,10 @@ h1,h2,h3,h4,h5,h6{color: #374151;}
 .section-title h2{
     font-family: 'Dancing Script', cursive;
 }
+input[type='radio']{
+    display: none;
+}
+.star{
+    cursor: pointer;
+    transition: color 200ms;
+}
