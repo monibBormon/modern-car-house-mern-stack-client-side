@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Audi Speedy X",
+        "price": 57000,
+        "cc": 800,
+        "type": "automatic",
+        "year": 2015,
+        "img": "https://i.ibb.co/2g1tyH1/silver-color-mini-coupe-road-drive-sunlight-114579-5050.jpg",
+        "body": "The only Audi on this list is a hot little number, which we characterized as “an uncompromising option in a field of compromised options.” Powered by a 4.0-liter twin-turbo V8 (which seems to be a popular format in this list), its 591 hp and 590 lb-ft of torque get it scootin’ to 60 mph in just 3.7 seconds, and on to a top speed of 190 mph. It even has the bragging rights of holding the Nürburgring lap record for an SUV.This is one SUV where being a passenger might be more exciting than sitting in the driver’s seat, thanks to over-the-top luxury — what do you expect from a car that costs over $350,000? The driver doesn’t go unrewarded, though, with a turbocharged 6.75-liter V12 at their disposal. Thanks to the Black Badge’s software upgrade, it makes 592 hp and 664 lb-ft of torque."
+    },
+    {
+        "name": "lamborgini 2019 edition",
+        "price": 60000,
+        "cc": 1000,
+        "type": "automatic",
+        "year": 2019,
+        "img": "https://i.ibb.co/6sxvxhv/white-luxury-sport-sedan-car-standing-race-trace-front-side-view-114579-1161.jpg",
+        "body": "Lamborghini finally caved and made an SUV, but it still boasts Lamborghini performance, with its 4.0-liter twin-turbo V8 producing 641 hp and 627 lb-ft of torque. After hustling to 62 miles per hour in just 3.6 seconds, it’ll stretch its legs all the way to a top speed of 190 miles per hour. Cost of entry is high, too, at about $222,000."
+    },
+    {
+        "name": "Red Audi rc100",
+        "price": 43000,
+        "cc": 400,
+        "type": "automatic",
+        "year": 2018,
+        "img": "https://i.ibb.co/qg99dvf/red-mini-coupe-parked-port-114579-5194.jpg",
+        "body": "When eight cylinders isn’t enough, Bentley has you covered. The Bentayga Speed’s turbocharged W12 displaces 6.0 liters, providing 626 hp and 664 lb-ft of torque. A 0-60 spring happens in 3.8 seconds, and it has a top speed of 190 mph. It also has an opulent interior, and an air suspension with continuous damping control to make sure you and your passengers reach extralegal speeds in supreme comfort and luxury."
+    },
+    {
+        "name": "Nissan auto xero",
+        "price": 23444,
+        "cc": 222,
+        "type": "automatic",
+        "year": 2003,
+        "img": "https://i.ibb.co/nLhjHpn/yellow-sport-car-with-black-autotuning-road-114579-5051.jpg",
+        "body": "This isn’t the only Porsche on this list, but it’s the only one without a plug. The Cayenne Turbo GT’s 4.0-liter twin-turbo V8 makes 631 hp and 626 lb-ft of torque. When equipped with the Sport Chrono package, it’ll sprint to 60 mph in 3.1 seconds and do the quarter mile in 11.6 seconds. Its top speed is listed at 186 mph. Not too shabby for a vehicle that weighs 5,000 pounds. "
+    },
+    {
+        "name": "Black Alion",
+        "price": 59000,
+        "cc": 500,
+        "type": "automatic",
+        "year": 2020,
+        "img": "https://i.ibb.co/DPd1BTZ/black-sport-car-highway-drive-sunset-114579-5064.jpg",
+        "body": "The newest model on this list also comes from the newest brand. Rivian’s electric SUV shares its underpinnings with the R1T pickup. Rivian says with the correct tires, its quad-motor setup gives the R1S a 0-60 time of 3 seconds. While it’s still unclear what the net system peak output is, the dual motor unit up front provides 415 hp and 413 lb-ft of torque, while the rear unit makes 420 hp and 495 lb-ft. Do they peak at the same time? We don’t know. Does it matter? Probably not. How fast do you need to go?"
+    },
+    {
+        "name": "red nissan car",
+        "price": 22499,
+        "cc": 399,
+        "type": "automatic",
+        "year": 2012,
+        "img": "https://i.ibb.co/bgMFT0q/red-luxurious-sedan-car-diving-street-181624-25401.jpg",
+        "body": "This bonkers EV is the only vehicle on this list to break the 1,000-hp threshold … at least until GMC begins producing the SUV version of its new electric Hummer. With its three electric motors pushing it to a 0-60 time of just 2.5 seconds, it’s also the quickest. Tesla says it will do the quarter mile in just 9.9 seconds, and has a top speed of 163 miles per hour. Range is impressive, too, at 340 miles. Who needs that much power in their SUV? Well, someone with $119,990 burning a hole in their pocket, of course."
+    },
+    {
+        "name": "gray alion",
+        "price": 12999,
+        "cc": 322,
+        "type": "automatic",
+        "year": 2013,
+        "img": "https://i.ibb.co/zrWjMTr/silver-metallic-color-sport-sedan-road-114579-5035.jpg",
+        "body": "Just a couple of months ago, Rivian delivered its first vehicles, mostly to its own employees. It will only produce about 1,200 units by year-end at its plant in Normal, Illinois. The company, which lost almost $1 billion in the first half of the year, estimates that annual production will hit 150,000 vehicles at its main facility by late 2023."
+    },
+    {
+        "name": "corola black edition",
+        "price": 32110,
+        "cc": 300,
+        "type": "automatic",
+        "year": 2014,
+        "img": "https://i.ibb.co/XZQx6gr/black-luxury-sport-sedan-car-standing-race-trace-114579-1169.jpg",
+        "body": "The removal of the seats also allows for a major redesign of the interior, which features extensive use of leather trim and carbonfibre. The seats feature an exclusive stitching pattern, while oak trim covers the rear bench and luggage deck."
+    },
+    {
+        "name": "Pajero White edition",
+        "price": 56000,
+        "cc": 600,
+        "type": "automatic",
+        "year": 2018,
+        "img": "https://i.ibb.co/vYsj7sS/white-offroader-jeep-parking-114579-4007.jpg",
+        "body": "Ferrari said the BR20 client was “deeply involved” in the creation of the car, although it has revealed no details of their identity. It also hasn't given a value for the car. "
+    },
+    {
+        "name": "Blue nissan edition",
+        "price": 44999,
+        "cc": 599,
+        "type": "automatic",
+        "year": 2019,
+        "img": "https://i.ibb.co/YTkfdNF/blue-sport-sedan-parked-yard-114579-5078.jpg",
+        "body": "Anti theft alarm, Transponder key, ABS/EBD, Carbon-Ceramic brakes, Electronic stability control, Retractable side airbag, Traction control, Two stage dual front airbags, Tyre pressure monitoring system, Bi-Xenon headlights, Electric heated door mirrors"
+    },
+    {
+        "name": "audi red xc499",
+        "price": 34000,
+        "cc": 400,
+        "type": "automatic",
+        "year": 2017,
+        "img": "https://i.ibb.co/ZNM3Mck/red-luxury-sedan-road-114579-5079.jpg",
+        "body": "Japanese has satisfied its customers with its products. Japanese used vehicles have gained fame and reputation around the globe. In 2021, the Japanese have exported 92,671 used cars in February, upscaled from January 2021. The units were increased by 21,183. In January 2021, it had 71,488 units. UAE is currently leading with most imported Japanese cars with 21,812 units in 2021, and Russia is in second place with 18,220 units."
+    },
+    {
+        "name": "nitro sports car ",
+        "price": 45000,
+        "cc": 700,
+        "type": "automatic",
+        "year": 2020,
+        "img": "https://i.ibb.co/7yHTgXx/red-mini-coupe-parked-port-front-view-ship-seaside-114579-5195.jpg",
+        "body": "The third reason is the cost-effectiveness of Japanese new and used cars. Customers can contact traders and their websites. They are a lot of stock available for sale. Moreover, the Japanese have robots and advanced technology, which reduces the production cost. You can achieve your goal to own a car by looking into Japanese-used vehicles. Not only are they affordable, but they have more than you can expect to have."
+    }
+]
