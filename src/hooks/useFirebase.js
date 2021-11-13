@@ -14,9 +14,6 @@ const useFirebase = () => {
     //get auth
     const auth = getAuth()
 
-    // google sign in 
-    //save user er parameter a put dite hobe
-
     // register user
     const registerUser = (email, password, name, history) => {
         setIsLoading(true)
@@ -54,7 +51,7 @@ const useFirebase = () => {
     // save user
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName }
-        fetch('http://localhost:5000/users', {
+        fetch('https://salty-beyond-08378.herokuapp.com/users', {
             method: method,
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)
@@ -75,7 +72,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://salty-beyond-08378.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])

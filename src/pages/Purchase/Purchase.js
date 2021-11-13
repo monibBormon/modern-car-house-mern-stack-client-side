@@ -12,16 +12,16 @@ const Purchase = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://salty-beyond-08378.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
-    }, [])
+    }, [id])
 
     // buy now
     const onSubmit = data => {
         data.title = product.name
         data.status = 'pending'
-        fetch('http://localhost:5000/orders', {
+        fetch('https://salty-beyond-08378.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -29,6 +29,7 @@ const Purchase = () => {
             .then(data => {
                 if (data.insertedId) {
                     history.push('/dashboard')
+                    reset()
                 }
             })
     }

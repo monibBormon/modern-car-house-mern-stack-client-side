@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
 
 const ManageOrders = () => {
     const [allOrders, setAllOrders] = useState([])
-    const { register } = useForm();
 
     useEffect(() => {
-        fetch('http://localhost:5000/all-orders')
+        fetch('https://salty-beyond-08378.herokuapp.com/all-orders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [])
 
     // handle status
     const handleStatus = (id) => {
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://salty-beyond-08378.herokuapp.com/updateStatus/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' }
         }).then(res => res.json())
@@ -24,7 +22,7 @@ const ManageOrders = () => {
             })
     }
     const handleStatus1 = (id) => {
-        fetch(`http://localhost:5000/updateStatus1/${id}`, {
+        fetch(`https://salty-beyond-08378.herokuapp.com/updateStatus1/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' }
         }).then(res => res.json())

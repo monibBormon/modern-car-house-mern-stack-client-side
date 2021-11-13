@@ -1,8 +1,6 @@
 import React from 'react';
-import { Switch, Route, Link, NavLink, useRouteMatch } from 'react-router-dom'
+import { Switch, Route, NavLink, useHistory } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth';
-import AdminRoute from '../../Login/AdminRoute/AdminRoute';
-import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
 import AddProduct from '../AddProduct/AddProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageOrders from '../ManageOrders/ManageOrders';
@@ -14,11 +12,13 @@ import Review from './Review/Review';
 
 const Dashboard = () => {
     const { admin, logOut } = useAuth()
-    console.log(admin);
+    const history = useHistory()
+
     const handleLogOut = () => {
         const confirmLogOut = window.confirm('Are you sure you want to log out?')
         if (confirmLogOut) {
             logOut()
+            history.replace('/')
         }
     }
     return (

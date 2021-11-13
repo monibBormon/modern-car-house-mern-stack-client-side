@@ -6,10 +6,10 @@ const MyOrders = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://salty-beyond-08378.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [])
+    }, [user.email])
     return (
         <div className="container mx-auto py-10">
             <div className="flex flex-col">

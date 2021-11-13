@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link, NavLink } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 
 
 // const user = {
@@ -18,7 +18,7 @@ import useFirebase from '../../../hooks/useFirebase';
 //     return classes.filter(Boolean).join(' ')
 // }
 const Header = () => {
-    const { user, logOut } = useFirebase()
+    const { user } = useAuth()
     return (
         <div>
             <div className="min-h-full">

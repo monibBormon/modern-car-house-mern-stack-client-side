@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDmWNy-xDSdnIFoFH84xQP3YAgWs3E0T0E",
-    authDomain: "modern-car-house.firebaseapp.com",
-    projectId: "modern-car-house",
-    storageBucket: "modern-car-house.appspot.com",
-    messagingSenderId: "1072114288419",
-    appId: "1:1072114288419:web:93f9cdec671c05c8632e96"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 export default firebaseConfig;
