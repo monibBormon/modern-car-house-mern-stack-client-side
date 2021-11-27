@@ -24,6 +24,11 @@
 * Node, Express, MongoDb Server
 * Api
 
+## Admin Login System
+
+* Admin Email: admin@admin.com
+* Password: 123456
+
 
 
 
