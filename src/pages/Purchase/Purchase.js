@@ -20,6 +20,7 @@ const Purchase = () => {
     // buy now
     const onSubmit = data => {
         data.title = product.name
+        data.price = product.price
         data.status = 'pending'
         fetch('https://salty-beyond-08378.herokuapp.com/orders', {
             method: 'POST',
@@ -28,7 +29,7 @@ const Purchase = () => {
         }).then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    history.push('/dashboard')
+                    history.push(`/payment-method/${data.insertedId}`)
                     reset()
                 }
             })
@@ -55,7 +56,7 @@ const Purchase = () => {
                             {/* errors will return when field validation fails  */}
                             {errors.exampleRequired && <span>This field is required</span>}
 
-                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2' type="submit" value='Buy Now' />
+                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2' type="submit" value='Continue Payment' />
                         </form>
                     </div>
                 </div>

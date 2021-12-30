@@ -8,6 +8,8 @@ import Login from "./pages/Login/Login/Login";
 import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
 import Register from "./pages/Login/Register/Register";
 import NotFound from "./pages/NotFound/NotFound";
+import OrderSuccess from "./pages/Payment/OrderSuccess";
+import Payment from "./pages/Payment/Payment";
 import Purchase from "./pages/Purchase/Purchase";
 import Footer from "./pages/Shared/Footer/Footer";
 import Header from "./pages/Shared/Header/Header";
@@ -33,6 +35,12 @@ function App() {
           </Route>
           <Route path='/login'>
             <Login></Login>
+          </Route>
+          <Route path='/payment-method/:id'>
+            <Payment />
+          </Route>
+          <Route path='/order-success'>
+            <OrderSuccess />
           </Route>
           <PrivateRoute path='/car-details/:id'>
             <Purchase></Purchase>

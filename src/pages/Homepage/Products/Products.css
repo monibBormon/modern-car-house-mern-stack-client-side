@@ -1,0 +1,10 @@
+.single-best-selling-car-box{
+    position: relative;
+    transition: .3s all;
+}
+/* .single-best-selling-car-box:hover .car-info-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+} */

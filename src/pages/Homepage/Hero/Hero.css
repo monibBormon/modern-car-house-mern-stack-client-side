@@ -1,0 +1,33 @@
+.slider-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    background-position:center center;
+}
+.slide-1{background-image: url('https://i.ibb.co/sCY2N0c/tyler-clemmensen-5q1xp-kresk-unsplash.jpg');}
+.slide-2{background-image: url('https://i.ibb.co/MPjVLNZ/gabriel-gurrola-u6-BPMXg-URu-I-unsplash.jpg');}
+.slide-3{background-image: url('https://i.ibb.co/7yHTgXx/red-mini-coupe-parked-port-front-view-ship-seaside-114579-5195.jpg');}
+.slider-box{
+    position: relative;
+}
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    right: 0;
+    text-overflow: inherit;
+}
+.slick-dots {
+    bottom: 12%;
+}
+.slick-dots li.slick-active button::before{
+    color: white;
+    font-size: 18px;
+    opacity: 1;
+}
+.slick-dots li button::before{
+    color: red;
+    opacity: .6;
+    font-size: 14px;
+}

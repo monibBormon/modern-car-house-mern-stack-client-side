@@ -4,7 +4,8 @@ import useFirebase from '../../../hooks/useFirebase';
 
 const AdminRoute = ({ children, ...rest }) => {
     const { user, admin, isLoading } = useFirebase()
-    if (isLoading) {
+    console.log(user.email, admin)
+    if (!admin) {
         return <div>
             <h2 className='text-4xl text-red-500 text-center font-medium pt-30'>Loading...</h2>
         </div>

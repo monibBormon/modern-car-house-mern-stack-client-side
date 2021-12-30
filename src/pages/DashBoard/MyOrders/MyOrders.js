@@ -3,6 +3,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const MyOrders = () => {
     const [products, setProducts] = useState([])
+    const [isDelete, setIsDelete] = useState(null)
     const { user } = useAuth()
 
     useEffect(() => {
@@ -10,6 +11,25 @@ const MyOrders = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [user.email])
+    // delete order
+    const handleDeleteOrder = (id) => {
+        const confirmation = window.confirm('Are you sure you want to cancel your order?')
+        if (confirmation) {
+            fetch(`https://salty-beyond-08378.herokuapp.com/delete-order/${id}`, {
+                method: 'DELETE',
+                headers: { 'content-type': 'application/json' }
+            }).then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        setIsDelete(true)
+                        alert('Deleted Successfully.')
+                        window.location.reload()
+                    } else {
+                        setIsDelete(false)
+                    }
+                })
+        }
+    }
     return (
         <div className="container mx-auto py-10">
             <div className="flex flex-col">
@@ -43,6 +63,12 @@ const MyOrders = () => {
                                         >
                                             Status
                                         </th>
+                                        <th
+                                            scope="col"
+                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                        >
+                                            Action
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
@@ -63,6 +89,9 @@ const MyOrders = () => {
                                                 <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                                     {product.status}
                                                 </span>
+                                            </td>
+                                            <td>
+                                                <button onClick={() => handleDeleteOrder(product._id)} className='hover:text-red-400 font-semibold text-center'>Cancel</button>
                                             </td>
                                         </tr>
                                     ))}
