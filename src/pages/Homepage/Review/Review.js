@@ -1,6 +1,53 @@
 import React from 'react';
 
 const Review = () => {
+<<<<<<< HEAD
+=======
+    const [ratings, setRatings] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/rating')
+            .then(res => res.json())
+            .then(data => setRatings(data))
+    }, [])
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
+    };
+>>>>>>> 3038c19 (payment method added)
     return (
         <div>
             <div className="md:container md:mx-auto px-5 lg:px-0 py-5 md:py-16 overflow-x-hidden">

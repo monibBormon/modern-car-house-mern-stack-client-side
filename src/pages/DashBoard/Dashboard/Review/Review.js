@@ -5,8 +5,25 @@ const Review = () => {
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
 
+<<<<<<< HEAD
     const handleRating = () => {
         alert('Rating Added Succsfully.')
+=======
+    const onSubmit = data => {
+        fetch('http://localhost:5000/rating', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    setSuccessRating(true)
+                    reset()
+                } else {
+                    setSuccessRating(false)
+                }
+            })
+>>>>>>> 3038c19 (payment method added)
     }
     return (
         <div>

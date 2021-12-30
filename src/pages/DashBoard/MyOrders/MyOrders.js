@@ -10,6 +10,28 @@ const MyOrders = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [user.email])
+<<<<<<< HEAD
+=======
+    // delete order
+    const handleDeleteOrder = (id) => {
+        const confirmation = window.confirm('Are you sure you want to cancel your order?')
+        if (confirmation) {
+            fetch(`http://localhost:5000/delete-order/${id}`, {
+                method: 'DELETE',
+                headers: { 'content-type': 'application/json' }
+            }).then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        setIsDelete(true)
+                        alert('Deleted Successfully.')
+                        window.location.reload()
+                    } else {
+                        setIsDelete(false)
+                    }
+                })
+        }
+    }
+>>>>>>> 3038c19 (payment method added)
     return (
         <div className="container mx-auto py-10">
             <div className="flex flex-col">
