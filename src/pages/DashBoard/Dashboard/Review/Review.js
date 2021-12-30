@@ -9,7 +9,7 @@ const Review = () => {
     const [successRating, setSuccessRating] = useState(false)
 
     const onSubmit = data => {
-        fetch('https://salty-beyond-08378.herokuapp.com/rating', {
+        fetch('http://localhost:5000/rating', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
