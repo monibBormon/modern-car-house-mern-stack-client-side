@@ -34,11 +34,6 @@ const CheckOutForm = ({ payment }) => {
         if (card === null) {
             return;
         }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 084fe8139098703a926912f61893631aaeef9fd5
         setProcessing(true)
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
