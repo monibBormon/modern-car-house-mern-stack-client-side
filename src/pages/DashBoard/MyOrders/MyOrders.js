@@ -11,16 +11,11 @@ const MyOrders = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [user.email])
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 084fe8139098703a926912f61893631aaeef9fd5
     // delete order
     const handleDeleteOrder = (id) => {
         const confirmation = window.confirm('Are you sure you want to cancel your order?')
         if (confirmation) {
-            fetch(`http://localhost:5000/delete-order/${id}`, {
+            fetch(`https://salty-beyond-08378.herokuapp.com/delete-order/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             }).then(res => res.json())
@@ -35,10 +30,6 @@ const MyOrders = () => {
                 })
         }
     }
-<<<<<<< HEAD
-=======
->>>>>>> 3038c19 (payment method added)
->>>>>>> 084fe8139098703a926912f61893631aaeef9fd5
     return (
         <div className="container mx-auto py-10">
             <div className="flex flex-col">
