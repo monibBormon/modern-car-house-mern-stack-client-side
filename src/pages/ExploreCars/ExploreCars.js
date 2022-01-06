@@ -5,12 +5,21 @@ import Products from '../Homepage/Products/Products';
 const ExploreCars = () => {
     const [products, setProducts] = useState([])
     const { isLoading } = useAuth()
+    const [pageCount, setPageCount] = useState(0)
+    const [page, setPage] = useState(0)
+
+    const size = 9;
 
     useEffect(() => {
-        fetch('https://salty-beyond-08378.herokuapp.com/products')
+        fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
             .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+            .then(data => {
+                setProducts(data.result)
+                const count = data.count;
+                const pageNumber = Math.ceil(count / size)
+                setPageCount(pageNumber)
+            })
+    }, [page])
     return (
         <>
             {
@@ -24,6 +33,11 @@ const ExploreCars = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {
                                     products.map(product => <Products key={product._id} product={product}></Products>)
+                                }
+                            </div>
+                            <div className="pagination">
+                                {
+                                    [...Array(pageCount).keys()].map(number => <button key={number} onClick={() => setPage(number)} className={number === page ? 'bg-red-500 border-2 border-red-500 text-white px-2 mr-2 mt-16 rounded font-semibold' : 'border-2 px-2 mr-2 mt-16 border-red-500 rounded font-semibold'}>{number + 1}</button>)
                                 }
                             </div>
                         </div>
