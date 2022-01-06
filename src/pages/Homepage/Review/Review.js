@@ -9,15 +9,10 @@ import "slick-carousel/slick/slick-theme.css";
 import './Review.css'
 
 const Review = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 084fe8139098703a926912f61893631aaeef9fd5
     const [ratings, setRatings] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/rating')
+        fetch('https://salty-beyond-08378.herokuapp.com/rating')
             .then(res => res.json())
             .then(data => setRatings(data))
     }, [])
@@ -58,10 +53,6 @@ const Review = () => {
             }
         ]
     };
-<<<<<<< HEAD
-=======
->>>>>>> 3038c19 (payment method added)
->>>>>>> 084fe8139098703a926912f61893631aaeef9fd5
     return (
         <div>
             <div className="md:container md:mx-auto px-5 lg:px-0 py-5 md:py-16 overflow-x-hidden">
