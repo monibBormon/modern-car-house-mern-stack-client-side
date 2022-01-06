@@ -7,7 +7,7 @@ const ManageProducts = () => {
     useEffect(() => {
         fetch('https://salty-beyond-08378.herokuapp.com/products')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => setProducts(data.result))
     }, [isDelete])
     // delete product
     const handleDeleteProduct = (id) => {
