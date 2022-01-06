@@ -36,8 +36,8 @@ const Purchase = () => {
     }
     return (
         <div>
-            <div className="container mx-auto py-10">
-                <div className="grid grid-cols-2 gap-4">
+            <div className="container mx-auto py-10 px-5 lg:px-0">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <div className="car-details">
                         <img src={product.img} alt="" />
                         <h3 className='text-4xl capitalize font-semibold my-5'>{product.name}</h3>
@@ -46,7 +46,7 @@ const Purchase = () => {
                         <p className='text-lg mt-5'>{product.body}</p>
                     </div>
                     <div className="puchase-info-form">
-                        <h2 className='text-4xl capitalize font-semibold mb-10 text-center'>Fill up the form to buy</h2>
+                        <h2 className='text-4xl capitalize font-semibold mb-10 text-center mt-10 lg:mt-0'>Fill up the form to buy</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("name")} placeholder='Your Name' /> <br />
                             <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' defaultValue={user.email} {...register("email", { required: true })} placeholder='Email' /> <br />
