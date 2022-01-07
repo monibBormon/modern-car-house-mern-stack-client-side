@@ -2,10 +2,11 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useFirebase from '../../../hooks/useFirebase';
+import { FcGoogle } from 'react-icons/fc'
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { loginUser, error } = useFirebase()
+    const { loginUser, error, signInWithGoogle } = useFirebase()
 
     //
     const location = useLocation()
@@ -13,6 +14,9 @@ const Login = () => {
 
     const onSubmit = data => {
         loginUser(data.email, data.password, location, history)
+    }
+    const handleGoogle = () => {
+        signInWithGoogle(location, history)
     }
     return (
         <div>
@@ -29,7 +33,8 @@ const Login = () => {
                             <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2' type="submit" value='Login' />
                         </form>
                         <h4 className='text-3xl text-center my-5 font-semibold'><span className='lg:w-52 w-20 h-1 bg-red-200 inline-block'></span> Or <span className='lg:w-52 w-20 h-1 bg-red-200 inline-block'></span></h4>
-                        <div>
+                        <div className='text-center'>
+                            <button onClick={handleGoogle} className='text-2xl mb-5 shadow px-5 py-1 rounded-lg font-medium'>Continue with <FcGoogle className='inline-block' /></button>
                             <h3 className='text-center'>New User? <Link to='/register' className='text-red-500 underline'>Create a free acoount.</Link></h3>
                         </div>
                     </div>
