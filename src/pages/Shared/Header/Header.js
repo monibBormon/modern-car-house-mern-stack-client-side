@@ -19,6 +19,7 @@ import useAuth from '../../../hooks/useAuth';
 // }
 const Header = () => {
     const { user } = useAuth()
+    console.log(user)
     return (
         <div>
             <div className="min-h-full">
