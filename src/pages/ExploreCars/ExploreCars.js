@@ -37,7 +37,7 @@ const ExploreCars = () => {
                             </div>
                             <div className="pagination">
                                 {
-                                    [...Array(pageCount).keys()].map(number => <button key={number} onClick={() => setPage(number)} className={number === page ? 'bg-red-500 border-2 border-red-500 text-white px-2 mr-2 mt-16 rounded font-semibold' : 'border-2 px-2 mr-2 mt-16 border-red-500 rounded font-semibold'}>{number + 1}</button>)
+                                    [...Array(pageCount).keys()].map(number => <button key={number} onClick={() => setPage(number)} className={number === page ? 'bg-red-500 border-2 border-red-500 text-white text-2xl px-2 mr-2 mt-16 rounded font-semibold' : 'border-2 px-2 mr-2 mt-16 border-red-500 text-xl rounded font-semibold'}>{number + 1}</button>)
                                 }
                             </div>
                         </div>
