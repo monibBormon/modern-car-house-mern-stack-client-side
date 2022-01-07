@@ -30,9 +30,9 @@ const Register = () => {
                             <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("password", { required: true })} type='password' placeholder='Password' /> <br />
                             <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("password2", { required: true })} type='password' placeholder='Re-enter Password' /> <br />
                             {/* errors will return when field validation fails  */}
-                            <p className='text-red-500 mb-2 font-semibold'>{error}</p>
+                            {errors.name || errors.email || errors.password || errors.password2 ? <span className='text-red-500 font-semibold  pl-5 mb-3'>Please fill all the input correctly!</span> : ""}
 
-                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2' type="submit" value='Register' />
+                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2 mt-3' type="submit" value='Register' />
                         </form>
                         <h4 className='text-3xl text-center my-5 font-semibold'><span className='lg:w-52 w-20 h-1 bg-red-200 inline-block'></span> Or <span className='lg:w-52 w-20 h-1 bg-red-200 inline-block'></span></h4>
                         <div>

@@ -48,16 +48,19 @@ const Purchase = () => {
                     <div className="puchase-info-form">
                         <h2 className='text-4xl capitalize font-semibold mb-10 text-center mt-10 lg:mt-0'>Fill up the form to buy</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("name")} placeholder='Your Name' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("name", { required: true })} placeholder='Your Name' /> <br />
                             <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' defaultValue={user.email} {...register("email", { required: true })} placeholder='Email' /> <br />
-                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("address")} placeholder='Your Address' /> <br />
-                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("city")} placeholder='City' /> <br />
-                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("phone")} type='number' placeholder='Your Phone Number' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("address", { required: true })} placeholder='Your Address' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("city", { required: true })} placeholder='City' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("phone", { required: true })} type='number' placeholder='Your Phone Number' /> <br />
                             {/* errors will return when field validation fails  */}
-                            {errors.exampleRequired && <span>This field is required</span>}
+                            {errors.name || errors.email || errors.address || errors.city || errors.phone ? <span className='text-red-500 font-semibold  pl-5 mb-3'>Please fill all the input correctly!</span> : ""}
 
-                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2' type="submit" value='Continue Payment' />
+                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2 mt-3' type="submit" value='Continue Payment' />
                         </form>
+                        <div>
+                            <p className='text-red-500 mt-10 px-10'> {`/*`} Please use the demo card number <span className='font-semibold'>4242 4242 4242 4242</span> then you can use any future date and in cvc type 5 digit {`*/`}</p>
+                        </div>
                     </div>
                 </div>
             </div>
