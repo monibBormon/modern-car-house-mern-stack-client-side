@@ -6,7 +6,7 @@ const BestSellers = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('https://salty-beyond-08378.herokuapp.com/products')
+        fetch('https://modern-car-house-mern-stack-server-side.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data.result))
     }, [])

@@ -6,7 +6,7 @@ const MakeAdmin = () => {
     const [success, setSuccess] = useState(false)
 
     const onSubmit = data => {
-        fetch('https://salty-beyond-08378.herokuapp.com/users/admin', {
+        fetch('https://modern-car-house-mern-stack-server-side.vercel.app/users/admin', {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

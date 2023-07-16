@@ -12,7 +12,7 @@ const Review = () => {
     const [ratings, setRatings] = useState([])
 
     useEffect(() => {
-        fetch('https://salty-beyond-08378.herokuapp.com/rating')
+        fetch('https://modern-car-house-mern-stack-server-side.vercel.app/rating')
             .then(res => res.json())
             .then(data => setRatings(data))
     }, [])

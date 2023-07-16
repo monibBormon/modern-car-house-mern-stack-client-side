@@ -4,14 +4,14 @@ const ManageOrders = () => {
     const [allOrders, setAllOrders] = useState([])
 
     useEffect(() => {
-        fetch('https://salty-beyond-08378.herokuapp.com/all-orders')
+        fetch('https://modern-car-house-mern-stack-server-side.vercel.app/all-orders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [])
 
     // handle status
     const handleStatus = (id) => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/updateStatus/${id}`, {
+        fetch(`https://modern-car-house-mern-stack-server-side.vercel.app/updateStatus/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' }
         }).then(res => res.json())
@@ -22,7 +22,7 @@ const ManageOrders = () => {
             })
     }
     const handleStatus1 = (id) => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/updateStatus1/${id}`, {
+        fetch(`https://modern-car-house-mern-stack-server-side.vercel.app/updateStatus1/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' }
         }).then(res => res.json())

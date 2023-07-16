@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const [isDelete, setIsDelete] = useState(null)
 
     useEffect(() => {
-        fetch('https://salty-beyond-08378.herokuapp.com/products')
+        fetch('https://modern-car-house-mern-stack-server-side.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data.result))
     }, [isDelete])
@@ -13,7 +13,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = (id) => {
         const confirmation = window.confirm('Are you sure product will be delete parmanently?')
         if (confirmation) {
-            fetch(`https://salty-beyond-08378.herokuapp.com/delete/${id}`, {
+            fetch(`https://modern-car-house-mern-stack-server-side.vercel.app/delete/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             }).then(res => res.json())

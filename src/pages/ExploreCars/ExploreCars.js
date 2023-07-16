@@ -11,7 +11,7 @@ const ExploreCars = () => {
     const size = 9;
 
     useEffect(() => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/products?page=${page}&&size=${size}`)
+        fetch(`https://modern-car-house-mern-stack-server-side.vercel.app/products?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.result)
@@ -32,7 +32,10 @@ const ExploreCars = () => {
                         <div className="md:container md:mx-auto px-5 lg:px-0 py-10">
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {
-                                    products.map(product => <Products key={product._id} product={product}></Products>)
+                                    products?.length === 0 && <div>Loading..</div>
+                                }
+                                {
+                                    products?.map(product => <Products key={product._id} product={product}></Products>)
                                 }
                             </div>
                             <div className="pagination">

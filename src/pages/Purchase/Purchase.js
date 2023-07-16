@@ -12,7 +12,7 @@ const Purchase = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/products/${id}`)
+        fetch(`https://modern-car-house-mern-stack-server-side.vercel.app/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
@@ -22,7 +22,7 @@ const Purchase = () => {
         data.title = product.name
         data.price = product.price
         data.status = 'pending'
-        fetch('https://salty-beyond-08378.herokuapp.com/orders', {
+        fetch('https://modern-car-house-mern-stack-server-side.vercel.app/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

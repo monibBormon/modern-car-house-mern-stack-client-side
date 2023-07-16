@@ -7,7 +7,7 @@ const AddProduct = () => {
     const history = useHistory()
 
     const onSubmit = data => {
-        fetch('https://salty-beyond-08378.herokuapp.com/products', {
+        fetch('https://modern-car-house-mern-stack-server-side.vercel.app/products', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

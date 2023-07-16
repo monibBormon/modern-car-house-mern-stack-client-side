@@ -51,7 +51,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className='text-center text-white font-semibold text-xl py-5 mt-5 border-t-2 border-red-500'>All right reserved to <span className='text-2xl'>MCH Cars</span> &copy; 2021</p>
+            <p className='text-center text-white font-semibold text-xl py-5 mt-5 border-t-2 border-red-500'>All right reserved to <span className='text-2xl'>MCH Cars</span> &copy; 2023</p>
         </div>
     );
 };
